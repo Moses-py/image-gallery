@@ -35,8 +35,7 @@ export const Navbar = styled.div`
     background: transparent;
 
     @media (max-width: 991px) {
-        padding: .8rem 1.2rem;
-        text-align: center;
+        padding: .8rem 1.8rem;
     }
 `
 export const LogoImageContainer = styled.div`
