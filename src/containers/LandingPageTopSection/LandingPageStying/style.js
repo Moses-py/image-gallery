@@ -54,8 +54,8 @@ export const LogoName = styled.h1`
 export const Heading = styled(LogoName)`
 font-size: 3.5rem;
 text-transform: uppercase;
-font-family: 'Poppins', sans-serif;
-line-height: 1.2;
+font-family: 'Montserrat', sans-serif;
+line-height: 1.4;
 `
 
 export const LandingDetails = styled.div`
