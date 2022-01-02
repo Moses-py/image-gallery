@@ -1,0 +1,17 @@
+export const images = [
+    "/images/landingImages/anna-kolosyuk-D5nh6mCW52c-unsplash (1).jpg",
+    "/images/landingImages/blake-verdoorn-cssvEZacHvQ-unsplash.jpg",
+    "/images/landingImages/c-d-x-PDX_a_82obo-unsplash.jpg",
+    "/images/landingImages/christopher-campbell-kFCdfLbu6zA-unsplash.jpg",
+    "/images/landingImages/dhiva-krishna-YApS6TjKJ9c-unsplash.jpg",
+    "/images/landingImages/dima-panyukov-DwxlhTvC16Q-unsplash.jpg",
+    "/images/landingImages/hans-reniers-lQGJCMY5qcM-unsplash.jpg",
+    "/images/landingImages/hector-achautla-3vXtQZtNI2Y-unsplash.jpg",
+    "/images/landingImages/ian-dooley-iD5aVJFCXJg-unsplash.jpg",
+    "/images/landingImages/kunal-shinde--f0YLss50Bs-unsplash (1).jpg",
+    "/images/landingImages/oliver-pecker-HONJP8DyiSM-unsplash.jpg",
+    "/images/landingImages/rachel-park-hrlvr2ZlUNk-unsplash.jpg",
+    "/images/landingImages/ramon-salinero-vEE00Hx5d0Q-unsplash.jpg",
+    "/images/landingImages/thisisengineering-raeng-sbVu5zitZt0-unsplash.jpg",
+    "/images/landingImages/zdenek-machacek-UxHol6SwLyM-unsplash.jpg",
+]
