@@ -2,63 +2,74 @@ import styled from "styled-components";
 
 
 export const GallerySection = styled.section`
-    margin-top: -3rem;
-    background: black;
+    background: #fff;
     padding-bottom: 3rem;
 `
 export const GalleryContainer = styled.div`
-    padding: 4% 4%;
-    break-inside: avoid;
-    column-count: 3;
-    gap: 10px;
+    max-width: 1024px;
+    margin-top: 0;
+    padding: 0 2rem;
+    margin-right: auto;
+    margin-left: auto;
     background: white;
     border-radius: 30px;
-    margin: 2rem 3rem;
-    @media (max-width: 991px) and (min-width: 425px) {
-        column-count: 2;
-    }
-
     @media (max-width: 424px ) {
-        column-count: 1;
-        margin: .5rem 1rem;
+        margin: .5rem;
+        border-radius: 10px;
+        padding: 1rem
+    }
+`
+
+export const ImageHolder = styled.div`
+    columns: 1;
+    column-gap: 10px;
+    padding: 5;
+    overflow: hidden;
+
+    .imageContainer {
+        overflow: hidden;
         border-radius: 10px;
     }
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {  
+        columns: 2;
+    }
+    @media only screen and (min-width: 1024px) {
+          columns: 4;
+      }
 `
 
 export const Image = styled.img`
-    display: flex;
     width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
     margin-top: 1.5%;
     border-radius: 10px;
-    opacity: .9;
-    transition: all ease .4s;
+    transition: all linear .4s;
     &:hover {
-        transform: scale(.9);
+        transform: scale(1.1);
         border-radius: 10px;
-        opacity: 1;
     }
 `
 
-export const Heading = styled.h1`
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 3rem;
-`
-
 export const InterestContainer = styled.div`
-    margin: 2rem 4rem;
-    padding: 3rem;
+    margin: 0 auto;
+    padding: 0 auto;
+    @media (max-width: 425px) {
+        padding: 1.5rem .5rem;
+        margin: 0 0;
+
+    }
 `
 
 export const PreferenceRow = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    column-count: 5;
-    gap: 10px;
-    background: white;
+    padding: 3% 2%;
+    @media (max-width: 650px) {
+        flex-wrap: wrap;
+    }
 `
 export const PreferenceHolder = styled.div`
     border: .5px solid #fff;
@@ -67,8 +78,11 @@ export const PreferenceHolder = styled.div`
     padding: .5rem 2rem; 
     border-radius: 25px;
     font-size: .8rem;
-    margin: 3% 2%;
+    margin: 3%;
     cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     &:hover {
         background: #fff;
         border: .5px solid #111;

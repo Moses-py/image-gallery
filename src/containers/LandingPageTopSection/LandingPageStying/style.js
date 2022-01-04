@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const LandingPageTopBackground = styled.div`
-    position: relative;
     right: 0;
     width: 100%;
+    height: 70%;
     color: white;
     transition:all ease 0.3s;
     @media (max-width: 768px) {
-        padding-bottom: 10%; 
+        height: 60%;
     }
 `
 export const Image = styled.img`
@@ -32,8 +32,7 @@ export const Overlay = styled.div`
 `
 export const Navbar = styled.div`
     padding: 1rem 2rem;
-    background: transparent;
-
+    background: #fff;
     @media (max-width: 991px) {
         padding: .8rem 1.8rem;
     }
@@ -47,7 +46,7 @@ export const LogoImageContainer = styled.div`
     }
 `
 export const LogoName = styled.h1`
-    color: #fff;
+    color: #111;
     font-family: 'Montserrat', sans-serif;
 `
 
@@ -56,102 +55,31 @@ font-size: 3.5rem;
 text-transform: uppercase;
 font-family: 'Montserrat', sans-serif;
 line-height: 1.4;
+color: #fff;
+@media (min-width: 426px) and (max-width: 768px) {
+    font-size: 2rem !important;
+}
+@media (max-width: 425px) {
+    font-size: 2rem !important;
+}
 `
 
 export const LandingDetails = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    div {
-        flex: 1;
-    }
- }
-    @media (max-width: 991px) {
-        flex-direction: column;
-    }
-`
-export const CardContainer = styled.div`
-position: relative;
-padding: 20% 0;
-.absoluteImage {
-    position: absolute;
-    width: 300px;
-    object-fit: contain;
-    border-radius: 10px;
-    opacity: .9;
-}
-.imageOne {
-    top: 100px;
-    left: 300px;
-    opacity: 1 !important;
-}
 
-.imageTwo {
-    left: 120px;
-    top: 0;
-    width: 300px;
-    z-index: -1
-}
-
-.imageThree {
-    bottom: 120px;
-    right: 80px;
-    z-index: -1;
-}
-
-.imageFour {
-    top: 0;
-    right: 80px;
-    z-index: -1;
-}
-
-.imageFive {
-    bottom: 120px;
-    left: 120px;
-    z-index: -1;
-}
-
-.imageSix {
-    right: 20px;
-    top: 30%;
-    z-index: -1;
-}
-
-.imageSeven {
-    top: 30%;
-    left: 40px;
-    z-index: -1;
-}
-
-@media (min-width: 992px) and (max-width: 1440px) {
-    padding: 0;
-}
-
-@media (max-width: 1024px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 0;
-        .imageArray {
-            display: none;
-        }
-    }
 `
 
 export const LandingText = styled.div`
-    margin: 10% auto;
-    padding: 10%;
+    margin: 5% 22%;
     h4 {
         font-size: 1.2rem;
         font-family: 'Poppins', sans-serif;
         line-height: 1.5;
         color: #fff;
-        margin-top: 5%;
         font-weight: 400;
     }
 
-    @media (max-width: 767px) {
-        margin: 10% auto;
+    @media (max-width: 768px) {
+        margin: 5% auto;
         padding: 8%;
         h1 {
             font-size: 2.5rem;
@@ -164,9 +92,10 @@ export const LandingText = styled.div`
         }
     }
 
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: 769px) and (max-width: 1280px) {
+        margin: 5% 15%;
         h1 {
-            font-size: 3.2rem;
+            font-size: 2.5rem;
         }
          h4 {
              margin: 5% auto;

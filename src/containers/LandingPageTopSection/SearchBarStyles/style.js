@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const SearchBarContainer = styled.div`
     background: #fff;
-    padding: 5% 7%;
+    padding: 2% ;
     border-radius: 5px;
-    margin-top: 10%;
+    margin-top: 5%;
+
+    @media (max-width: 425px) {
+        margin-top:10%;
+    }
     input {
-        padding: 5% 10%;
+        padding: 2% 4%;
         border-radius: 5px;
         border: none;
         background: #111;
@@ -19,10 +23,10 @@ export const SearchBarContainer = styled.div`
         color: white;
         font-weight: 400;
     }
-
-    @media (max-width: 991px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (max-width: 425px) {
+        padding: 3% 5%;
+        input {
+            padding: 4% 6%;
+        }
     }
 `
