@@ -16,7 +16,7 @@ export const ImageResultsContextProvider = ({children}) => {
 
     const [singleImageData, setSingleImageData] = useState({})
 
-    let randomPage = Math.floor(Math.random() * 50) + 1
+    let randomPage = Math.floor(Math.random() * 5) + 1
 
     const processResult = (res) => res.type === "success" ? setImageData(res.response.results): console.log("Unsuccessfull request");
 

@@ -5,7 +5,7 @@ export const ErrorDisplay = () => {
     return (
         <>
             <Error>
-                <ErrorImage src="\images\undraw_Page_not_found_re_e9o6 (1).png" alt="error Image" />
+                <ErrorImage src="https://www.nicepng.com/png/detail/990-9903223_404-error-lettering-website-logo-flat-animation-web.png" alt="error Image" />
             </Error>
             <ErrorText>Ooops! Requested resource not available at the moment</ErrorText>
         </>
