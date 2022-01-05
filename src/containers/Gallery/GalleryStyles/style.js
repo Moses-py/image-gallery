@@ -6,49 +6,49 @@ export const GallerySection = styled.section`
     padding-bottom: 3rem;
 `
 export const GalleryContainer = styled.div`
-    max-width: 1024px;
     margin-top: 0;
     padding: 0 2rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 10%;
+    margin-left: 10%;
     background: white;
     border-radius: 30px;
-    @media (max-width: 424px ) {
+    @media (max-width: 767px ) {
         margin: .5rem;
-        border-radius: 10px;
         padding: 1rem
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1440px) {
+        margin: 1rem;
     }
 `
 
 export const ImageHolder = styled.div`
     columns: 1;
-    column-gap: 10px;
-    padding: 5;
+    column-gap: 20px;
     overflow: hidden;
 
     .imageContainer {
         overflow: hidden;
-        border-radius: 10px;
+        position: relative;
     }
-    @media only screen and (max-width: 1023px) and (min-width: 768px) {  
+    .imageList {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-top: 1.5%;
+        transition: all ease .5s !important;
+        &:hover {
+            transform: scale(1.1);
+            opacity: .8;
+        }
+    }
+    @media only screen and (min-width: 500px) and (max-width: 767px) {
         columns: 2;
+  }
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {  
+        columns: 3;
     }
     @media only screen and (min-width: 1024px) {
           columns: 4;
-      }
-`
-
-export const Image = styled.img`
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 10px;
-    margin-top: 1.5%;
-    border-radius: 10px;
-    transition: all linear .4s;
-    &:hover {
-        transform: scale(1.1);
-        border-radius: 10px;
     }
 `
 
@@ -88,4 +88,23 @@ export const PreferenceHolder = styled.div`
         border: .5px solid #111;
         color: #111;
     }
+`
+
+export const Error = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ErrorImage = styled.img`
+    width: 300px;
+    object-fit: contain;
+`
+
+export const ErrorText = styled.p`
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: light-grey;
+    margin-top: 2rem;
 `

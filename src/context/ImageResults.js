@@ -3,51 +3,53 @@ import React, {useEffect, useState} from "react";
 
 import { unsplash } from "../service/unsplash";
 
- const ImageResultsContext = React.createContext({
-
+const ImageResultsContext = React.createContext({
     imageList: [],
     imagePreference: () => {},
-    inputImageSearch: () => {}
-
+    inputImageSearch: () => {},
+    setImageData: () => {}
 })
 
-export default ImageResultsContext
-
-
 export const ImageResultsContextProvider = ({children}) => {
+
     const [imageData, setImageData] = useState([]);
 
-    const processResult = (res) => {
+    const [singleImageData, setSingleImageData] = useState({})
 
-        const imageArray = res.response.results
+    let randomPage = Math.floor(Math.random() * 50) + 1
 
-        return setImageData(imageArray)
-    }
+    const processResult = (res) => res.type === "success" ? setImageData(res.response.results): console.log("Unsuccessfull request");
 
-    const imageListReq = (query) => {
+    const imageListReq = (query) => unsplash.search.getPhotos({ query, page: randomPage, perPage: 100}).then(res => processResult(res))
 
-        unsplash.search.getPhotos({
-            query,
-            page: 1,
-            perPage: 50
-
-            }).then(res => {
-                processResult(res)
-            })
-
-        }
-
-    const getImages = () => imageListReq("Art")
+    const getImages = () => unsplash.photos.list({ page: randomPage, perPage: 100 }).then(res => processResult(res))
 
     useEffect(() => { getImages() }, [] )
 
-    const imagePreferenceHandler = (title) => {
-        imageListReq(title)  
-    }
+    const imagePreferenceHandler = (title) => imageListReq(title)  
 
-    const searchBarHandler = (inputVal) => {
-        imageListReq(inputVal)
-    }
+    const searchBarHandler = (inputVal) => imageListReq(inputVal)
 
-    return <ImageResultsContext.Provider value={{imageData: imageData, imagePreference: imagePreferenceHandler, inputImageSearch: searchBarHandler}}>{children}</ImageResultsContext.Provider>
+    const setSingleImageDataHandler = (image) => setSingleImageData(image)
+
+    return (
+    <ImageResultsContext.Provider value={{imageData, imagePreference: imagePreferenceHandler, inputImageSearch: searchBarHandler, singleImageData, setImageData: setSingleImageDataHandler}}>
+        {children}
+    </ImageResultsContext.Provider>
+    )
 }
+
+export const ModalContext = React.createContext({
+    modal: '',
+
+    setModal: () => {}
+}) 
+
+export const ModalContextProvider = ({children}) => {
+
+    const [modal, setModal] = useState(false)
+
+    return <ModalContext.Provider value={{modal: modal, showModal: setModal}}>{children}</ModalContext.Provider>
+}
+
+export default ImageResultsContext

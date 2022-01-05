@@ -11,14 +11,14 @@ export const LandingPageTopBackground = styled.div`
     }
 `
 export const Image = styled.img`
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: -1;
-opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: .5;
 `
 
 export const Overlay = styled.div`
@@ -51,17 +51,17 @@ export const LogoName = styled.h1`
 `
 
 export const Heading = styled(LogoName)`
-font-size: 3.5rem;
-text-transform: uppercase;
-font-family: 'Montserrat', sans-serif;
-line-height: 1.4;
-color: #fff;
-@media (min-width: 426px) and (max-width: 768px) {
-    font-size: 2rem !important;
-}
-@media (max-width: 425px) {
-    font-size: 2rem !important;
-}
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    color: #fff;
+    @media (min-width: 426px) and (max-width: 768px) {
+        font-size: 2rem !important;
+    }
+    @media (max-width: 425px) {
+        font-size: 2rem !important;
+    }
 `
 
 export const LandingDetails = styled.div`
