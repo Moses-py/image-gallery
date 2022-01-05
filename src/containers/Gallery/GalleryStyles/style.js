@@ -53,10 +53,10 @@ export const ImageHolder = styled.div`
 `
 
 export const InterestContainer = styled.div`
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0 ;
+    padding: 0 ;
     @media (max-width: 425px) {
-        padding: 1.5rem .5rem;
+        padding: 0;
         margin: 0 0;
 
     }
@@ -107,4 +107,9 @@ export const ErrorText = styled.p`
     font-weight: lighter;
     color: light-grey;
     margin-top: 2rem;
+`
+export const FootNote = styled.p`
+    text-align: center;
+    font-size: .9rem;
+    color: grey;
 `

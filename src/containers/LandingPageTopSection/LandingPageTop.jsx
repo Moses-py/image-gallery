@@ -21,7 +21,7 @@ export const LandingPageTop = () => {
                 <LandingDetails>
                         <LandingText>
                            <Heading>Best Photo gallery Collection</Heading> 
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam nisi illo optio quibusdam dicta molestias voluptatibus quia rerum culpa.</h4>
+                            <h4>The World's Largest Library for clear, high quality resolution photos.</h4>
                             <SearchBar />
                         </LandingText>
                 </LandingDetails>

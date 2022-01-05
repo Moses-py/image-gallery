@@ -7,9 +7,10 @@ export const Interest = () => {
                 <PreferenceRow>
                     <Preference title='Nature' />
                     <Preference title='Food' />
-                    <Preference title='Art' />
+                    <Preference title='Animals' />
                     <Preference title='Music' />
                     <Preference title='Sports' />
+                    <Preference title="Science" />
                 </PreferenceRow>
         </InterestContainer>
     )
