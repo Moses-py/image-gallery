@@ -1,11 +1,8 @@
 import React from 'react'
-import {Card} from './Card'
-import { useWindowDimensions } from '../../windowsDimension'
-import { LandingDetails, LandingPageTopBackground, LandingText, LogoImageContainer, Navbar, Image, LogoName, Heading, CardContainer, Overlay } from './LandingPageStying/style'
+import { LandingDetails, LandingPageTopBackground, LandingText, LogoImageContainer, Navbar, Image, LogoName, Heading, Overlay } from './LandingPageStying/style'
 import { SearchBar } from './SearchBar'
 
 export const LandingPageTop = () => {
-    const { width } = useWindowDimensions()
     return (
         <>
             <LandingPageTopBackground>
