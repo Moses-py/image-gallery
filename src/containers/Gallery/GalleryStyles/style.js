@@ -108,8 +108,23 @@ export const ErrorText = styled.p`
     color: light-grey;
     margin-top: 2rem;
 `
-export const FootNote = styled.p`
-    text-align: center;
-    font-size: .9rem;
-    color: grey;
+export const PaginateButtonContainer = styled.div`
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+`
+
+export const PaginateButton = styled.a`
+    padding: .5rem;
+    margin: 10px;
+    border: none;
+    background-color: #111;
+    transition: all linear .4s;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        background-color: #fff;
+        color: #111;
+        border: .5px solid #111;
+    }
 `

@@ -7,7 +7,9 @@ const ImageResultsContext = React.createContext({
     imageList: [],
     imagePreference: () => {},
     inputImageSearch: () => {},
-    setImageData: () => {}
+    setImageData: () => {},
+    query: "",
+    paginate: () => {}
 })
 
 export const ImageResultsContextProvider = ({children}) => {
@@ -16,11 +18,13 @@ export const ImageResultsContextProvider = ({children}) => {
 
     const [singleImageData, setSingleImageData] = useState({})
 
-    let randomPage = Math.floor(Math.random() * 5) + 1
+    const [query, setQuery] = useState(null)
 
-    const processResult = (res) => res.type === "success" ? setImageData(res.response.results): console.log("Unsuccessfull request");
+    const [randomPage, setRandomPage] = useState(1)
 
-    const imageListReq = (query) => unsplash.search.getPhotos({ query, page: randomPage, perPage: 100}).then(res => processResult(res))
+    const processResult = (res) => res.type === "success" ? setImageData(res.response.results): console.log(res);
+
+    const imageListReq = (query, pageNumber) => unsplash.search.getPhotos({ query, page: `${pageNumber !== undefined ? pageNumber : 1}`, perPage: 100}).then(res => processResult(res)).then(() => setQuery(query))
 
     const getImages = () => unsplash.photos.list({ page: randomPage, perPage: 100 }).then(res => processResult(res))
 
@@ -30,10 +34,12 @@ export const ImageResultsContextProvider = ({children}) => {
 
     const searchBarHandler = (inputVal) => imageListReq(inputVal)
 
-    const setSingleImageDataHandler = (image) => setSingleImageData(image)
+    const setSingleImageDataHandler = (image) => setSingleImageData(image) 
+
+    const handlePaginate = (paginateQuery, paginateNumber) => {imageListReq(paginateQuery, paginateNumber); setRandomPage(paginateNumber); console.log(paginateNumber)}
 
     return (
-    <ImageResultsContext.Provider value={{imageData, imagePreference: imagePreferenceHandler, inputImageSearch: searchBarHandler, singleImageData, setImageData: setSingleImageDataHandler}}>
+    <ImageResultsContext.Provider value={{imageData, imagePreference: imagePreferenceHandler, inputImageSearch: searchBarHandler, singleImageData, setImageData: setSingleImageDataHandler, query, paginate:handlePaginate}}>
         {children}
     </ImageResultsContext.Provider>
     )
