@@ -87,6 +87,7 @@ export const PreferenceHolder = styled.div`
         background: #fff;
         border: .5px solid #111;
         color: #111;
+        transform: scale(1.05)
     }
 `
 
@@ -115,8 +116,8 @@ export const PaginateButtonContainer = styled.div`
 `
 
 export const PaginateButton = styled.a`
-    padding: .5rem;
-    margin: 10px;
+    padding: .8rem 2rem;
+    margin: 10px 20px;
     border: none;
     background-color: #111;
     transition: all linear .4s;
@@ -126,5 +127,6 @@ export const PaginateButton = styled.a`
         background-color: #fff;
         color: #111;
         border: .5px solid #111;
+        transform: scale(1.05)
     }
 `

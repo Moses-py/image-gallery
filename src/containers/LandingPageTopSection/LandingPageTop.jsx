@@ -11,14 +11,14 @@ export const LandingPageTop = () => {
                 <Navbar>
                     <LogoImageContainer>
                         <LogoName>
-                            FotoSearch
+                            FOTOSEARCH
                         </LogoName>
                     </LogoImageContainer>
                 </Navbar>
                 <LandingDetails>
                         <LandingText>
-                           <Heading>Best Photo gallery Collection</Heading> 
-                            <h4>The World's Largest Library for clear, high quality resolution photos.</h4>
+                            <Heading>Best Photo gallery Collection</Heading> 
+                             <h4>The World's Largest Library for clear, high quality resolution photos.</h4>
                             <SearchBar />
                         </LandingText>
                 </LandingDetails>

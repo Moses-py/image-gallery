@@ -32,9 +32,12 @@ export const Overlay = styled.div`
 `
 export const Navbar = styled.div`
     padding: 1rem 2rem;
-    background: #fff;
+    background: transparent;
     @media (max-width: 991px) {
         padding: .8rem 1.8rem;
+    }
+    @media (max-width: 425px) {
+        background: #fff
     }
 `
 export const LogoImageContainer = styled.div`
@@ -46,8 +49,11 @@ export const LogoImageContainer = styled.div`
     }
 `
 export const LogoName = styled.h1`
-    color: #111;
-    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    @media (max-width: 425px) {
+        color: #111;
+    }
 `
 
 export const Heading = styled(LogoName)`
