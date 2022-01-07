@@ -15,8 +15,8 @@ export const ModalContainer = styled.div`
 
 export const CloseModal = styled.span`
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 2%;
+    right: 2%;
     color: #fff;
 `
 

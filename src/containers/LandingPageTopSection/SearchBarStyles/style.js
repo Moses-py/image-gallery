@@ -11,12 +11,24 @@ export const SearchBarContainer = styled.div`
     }
     input {
         padding: 2% 4%;
-        border-radius: 5px;
         border: none;
         background: #111;
         width: 100%;
         color: white;
         outline: none;
+    }
+
+    form {
+        display: flex;
+    }
+
+    .searchIcon {
+        border: none;
+        background-color: #111;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     input::placeholder {
