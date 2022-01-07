@@ -33,10 +33,20 @@ export const ImageResultsContextProvider = ({children}) => {
 
     const searchBarHandler = (inputVal) => imageListReq(inputVal)
     const imagePreferenceHandler = (title) => imageListReq(title)  
-    const setSingleImageDataHandler = (image) => setSingleImageData(image) 
+    const setSingleImageDataHandler = (image) => setSingleImageData(image)
+
+    const imageResultVariables = {
+        imageData,
+        imagePreference: imagePreferenceHandler,
+        inputImageSearch: searchBarHandler,
+        singleImageData,
+        setImageData: setSingleImageDataHandler,
+        query,
+        paginate: handleCounterState
+    }
 
     return (
-    <ImageResultsContext.Provider value={{imageData, imagePreference: imagePreferenceHandler, inputImageSearch: searchBarHandler, singleImageData, setImageData: setSingleImageDataHandler, query, paginate:handleCounterState}}>
+    <ImageResultsContext.Provider value={imageResultVariables}>
         {children}
     </ImageResultsContext.Provider>
     )

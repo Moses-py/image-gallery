@@ -5,11 +5,10 @@ import { GalleryContainer, GallerySection, PaginateButton, PaginateButtonContain
 import { Interest } from './Interest'
 
 export const Gallery = () => {
-
     const {imageData, query, paginate} = useContext(ImageResultsContext)
     const paginateLeft = () => paginate(query, "previous")
     const paginateRight = () => paginate(query, "next")
-    
+
     return (
         <>
             <GallerySection id='gallery'>
